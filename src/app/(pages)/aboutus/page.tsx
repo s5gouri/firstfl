@@ -62,7 +62,7 @@ export default function Page() {
           {/* Image */}
           <Image
             src={"/test.png"} // Replace with the correct path to your image
-            height={400}
+            height={500}
             width={1500}
             alt="Mission Image"
             className={`${mycss2.responsiveImage} mb-3`}
