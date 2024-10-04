@@ -65,7 +65,7 @@ export default function Page() {
             height={400}
             width={1500}
             alt="Mission Image"
-            className="img-fluid w-100 mb-3"
+            className={`${mycss2.responsiveImage} mb-3`}
           />
           {/* Text Overlay */}
           <div
