@@ -72,7 +72,7 @@ export default function Page() {
             className={`position-absolute top-50 start-50 translate-middle text-center ${styles.overlayText}`}
           >
             <div
-              className={`text-white fw-bold fs-1 mb-4 ${mycss1.a1}`} // Makes heading larger
+              className={`text-white fw-bold fs-1 mb-4 mt-4 ${mycss1.a1}`} // Makes heading larger
             >
               Mission Statement
             </div>
