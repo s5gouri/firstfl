@@ -79,3 +79,33 @@ a {
 .mmm {
   margin-top: 75px;
 }
+
+.nav-link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 5px; /* Space for the underline */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Aligns the underline at the bottom */
+  width: 0; /* Initially hidden */
+  height: 2px;
+  background-color: blue;
+  transition: width 0.4s ease-in-out; /* Animation for underline */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.nav-link.active::after {
+  width: 100%; /* Full width when active */
+}
+
+.wht{
+  background-color: white;
+}

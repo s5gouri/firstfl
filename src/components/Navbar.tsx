@@ -1,15 +1,15 @@
 import Link from "next/link";
 import mycss1 from "./Navbar.module.css";
 import Image from "next/image";
-
+import "@/app/globals.css";
 export default function Navbar() {
   return (
     <nav
-      className={`z-3 navbar navbar-expand-lg bg-body-light bg-light fixed-top ${mycss1.h}`}
+      className={`z-3 navbar navbar-expand-lg wht  fixed-top ${mycss1.h}`}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" href="/">
-          <Image src={"/logo.png"} height={50} width={100} alt="hii" />
+          <Image src={"/logo.jpg"} height={50} width={200} alt="hii" />
         </Link>
         <button
           className="navbar-toggler"
@@ -25,49 +25,33 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link " href="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href="/aboutus"
-              >
+              <Link className="nav-link " href="/aboutus">
                 About us
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href="/products"
-              >
+              <Link className="nav-link" href="/products">
                 Products
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link" href="/groupcompanies">
                 Group Companies
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href="/customorders"
-              >
+              <Link className="nav-link" href="/customorders">
                 Custom Order
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href="/contactus"
-              >
+              <Link className="nav-link" href="/contactus">
                 Contact us
               </Link>
             </li>

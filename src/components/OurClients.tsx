@@ -28,7 +28,6 @@ export default function OurClients() {
   const [logosPerSlide, setLogosPerSlide] = useState(4); // Default to 4 logos per slide
 
   useEffect(() => {
-    // Function to update logosPerSlide based on window size
     const updateLogosPerSlide = () => {
       if (window.matchMedia("(max-width: 640px)").matches) {
         setLogosPerSlide(2); // 2 logos on mobile devices
@@ -37,9 +36,7 @@ export default function OurClients() {
       }
     };
 
-    // Update on initial render
     updateLogosPerSlide();
-    // Listen for resize events
     window.addEventListener("resize", updateLogosPerSlide);
 
     const timer = setInterval(() => {
@@ -50,7 +47,7 @@ export default function OurClients() {
       clearInterval(timer);
       window.removeEventListener("resize", updateLogosPerSlide);
     };
-  }, [logosPerSlide]); // Include logosPerSlide as a dependency
+  }, [logosPerSlide]);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
@@ -61,7 +58,7 @@ export default function OurClients() {
       <div
         className={styles.carousel}
         style={{
-          transform: `translateX(-${(currentIndex * 100) / (logos.length / logosPerSlide)}%)`,
+          transform: `translateX(-${(currentIndex * 100) / Math.ceil(logos.length / logosPerSlide)}%)`,
         }}
       >
         {logos.map((logo, index) => (
@@ -77,18 +74,14 @@ export default function OurClients() {
         ))}
       </div>
       <div className={styles.dotsContainer}>
-        {Array.from({ length: Math.ceil(logos.length / logosPerSlide) }).map(
-          (_, index) => (
-            <button
-              key={index}
-              className={`${styles.dot} ${
-                index === currentIndex ? styles.activeDot : ""
-              }`}
-              onClick={() => handleDotClick(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          )
-        )}
+        {Array.from({ length: Math.ceil(logos.length / logosPerSlide) }).map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ""}`}
+            onClick={() => handleDotClick(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );
