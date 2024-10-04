@@ -1,0 +1,19 @@
+.overlayText {
+  z-index: 1; /* Ensures text is above the image */
+  pointer-events: none; /* Prevents interaction with the text */
+}
+
+.a1 {
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.a2 {
+  color: rgb(70, 70, 169);
+  font-size: 30px;
+}
+
+.a3 {
+  opacity: 0.9;
+  font-size: 20px;
+}

@@ -1,0 +1,45 @@
+.centeredText {
+  position: absolute; /* Ensure it is positioned over the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -20%); /* Adjust to be slightly above the center */
+  text-align: center; /* Center text alignment */
+  color: white; /* Set text color */
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensure it is above other elements */
+  opacity: 0; /* Start with invisible text */
+  animation: fadeUp 1s ease-in-out forwards; /* Apply the animation */
+  font-size: 2rem; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0; /* Start with invisible text */
+    transform: translate(
+      -50%,
+      20px
+    ); /* Start 20px below the centered position */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+    transform: translate(-50%, 0); /* Move to original centered position */
+  }
+}
+
+.heada1 {
+  font-size: 4vmax;
+  font-weight: 900;
+}
+
+.textTransition {
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateY(20px); /* Start 20px down */
+  animation: fadeUp11 0.5s forwards; /* Trigger animation */
+}
+
+@keyframes fadeUp11 {
+  to {
+    opacity: 1; /* Fade to full opacity */
+    transform: translateY(0); /* Move to original position */
+  }
+}
