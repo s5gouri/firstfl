@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav
-      className={`z-3 navbar navbar-expand-lg bg-body-light bg-light ${mycss1.h}`}
+      className={`z-3 navbar navbar-expand-lg bg-body-light bg-light fixed-top ${mycss1.h}`}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" href="/">
