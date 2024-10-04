@@ -1,9 +1,13 @@
 import Image from "next/image";
 import styles from "@/css/Products.module.css"; // Assuming you have custom styles
 import "@/app/globals.css"; // Assuming you have global styles
+import Navbar from "@/components/Navbar";
 export default function Page() {
   return (
     <div>
+      <div className=" w-full">
+        <Navbar />
+      </div>
       <div className="container-fluid position-relative">
         <div className="row">
           {/* Image */}
@@ -141,9 +145,7 @@ export default function Page() {
       <div className="container mt-4">
         <div className="row centre">
           <div className="col-10 mt-4 mb-2">
-            <h1 className="text-center ft fw-bolder textTransition">
-              Pillows
-            </h1>
+            <h1 className="text-center ft fw-bolder textTransition">Pillows</h1>
           </div>
         </div>
         <div className="row centre">

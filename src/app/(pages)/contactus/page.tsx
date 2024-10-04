@@ -4,9 +4,13 @@ import Image from "next/image";
 import mycss2 from "@/css/Contact.moule.css";
 import "@/app/globals.css";
 import JotFormEmbedonlyText from "@/components/JotFormEmbedonlyText";
+import Navbar from "@/components/Navbar";
 export default function Page() {
   return (
     <div>
+      <div className=" w-full">
+        <Navbar />
+      </div>
       <div className={`container-fluid ${mycss2.h}`}>
         <div className="row">
           <div className="d-flex justify-content-center">

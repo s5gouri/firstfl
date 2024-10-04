@@ -5,9 +5,13 @@ import "@/app/globals.css";
 import styles from "@/css/Products.module.css"; // Assuming you have custom styles
 
 import mycss1 from "@/css/About.module.css";
+import Navbar from "@/components/Navbar";
 export default function Page() {
   return (
     <div>
+      <div className=" w-full">
+        <Navbar />
+      </div>
       <div className="container-fluid mb-4">
         <div className="row mb-4">
           <div className="d-flex justify-content-center">

@@ -2,9 +2,13 @@ import Image from "next/image";
 import styles from "@/css/Simple.module.css"; // Adjust path based on your project structure
 import OurClients from "@/components/OurClients";
 import "@/app/globals.css";
+import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
+      <div className=" w-full">
+        <Navbar />
+      </div>
       <div className={`container-fluid ${styles.h}`}>
         <div id="carouselExampleCaptions" className="carousel slide">
           <div className="carousel-indicators">
